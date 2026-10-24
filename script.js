@@ -102,15 +102,7 @@ function drawLens(){
    }
  }
  $("lensNote").textContent=Math.abs(do_-2*f)<1?text("At dₒ = 2f, the image forms at 2f on the other side and is the same size, real and inverted.","dₒ = 2f yeroo ta'u, suuraan gama biraatti 2f irratti uumama; guddinni walqixa, dhugaa fi garagalchaa dha."):do_>f?text("The object is beyond the focal point, so the ideal converging lens forms a real, inverted image.","Wantichi fookasii irraa fagoo jira; kanaaf leensiin walitti qabu suuraa dhugaa fi garagalchaa uuma."):text("The object is inside the focal length, so the image is virtual and upright on the object side.","Wantichi dheerina fookasii keessaa jira; kanaaf suuraan yaadaa fi sirrii ta'ee gama wantaa irratti uumama.");
-}
-const questions=[
- {en:"A ball is launched at 20 m/s at 30° above level ground. Ignoring air resistance, which component of its initial velocity is horizontal?",om:"Kubbiin 20 m/s fi koonaa 30° irratti lafa walqixa irraa darbatame. Mormii qilleensaa yoo dhiifne, qaamni saffisa jalqabaa dalgee kam?",opts:[["20 sin 30°","20 sin 30°"],["20 cos 30°","20 cos 30°"],["20 tan 30°","20 tan 30°"],["20 / cos 30°","20 / cos 30°"]],a:1,why:"The horizontal component is vₓ = v₀ cos θ, so it is 20 cos 30° ≈ 17.3 m/s."},
- {en:"Light travels from glass (n = 1.50) into air (n = 1.00). Approximately what is the critical angle?",om:"Ifni galaasa (n = 1.50) keessaa gara qilleensaatti (n = 1.00) darba. Koonaan murteessaan tilmaamaan meeqa?",opts:[["19.5°","19.5°"],["30.0°","30.0°"],["41.8°","41.8°"],["48.2°","48.2°"]],a:2,why:"sin θc = n₂/n₁ = 1.00/1.50, so θc ≈ 41.8°."},
- {en:"A converging lens has focal length 10 cm. An object is 30 cm away. Using 1/f = 1/do + 1/di, where is the image?",om:"Leensiin walitti qabuu dheerina fookasii 10 cm qaba. Wantichi 30 cm irraa jira. 1/f = 1/do + 1/di fayyadamuun suuraan eessa jira?",opts:[["7.5 cm","7.5 cm"],["10 cm","10 cm"],["15 cm","15 cm"],["30 cm","30 cm"]],a:2,why:"1/di = 1/10 − 1/30 = 2/30 = 1/15, so di = 15 cm."},
- {en:"Which condition is necessary for total internal reflection?",om:"Calaqqee guutuu keessaa uumamuuf haalli barbaachisaan kam?",opts:[["Light goes from lower n to higher n","Ifni n xiqqaa irraa gara n guddaatti darba"],["Incident angle is always 0°","Koonaan seensaa yeroo hunda 0°"],["Light goes from higher n to lower n and exceeds the critical angle","Ifni n guddaa irraa gara n xiqqaatti darba; koonaan koonaa murteessaa caala"],["The two media have equal refractive indices","Miidiyaawwan lamaan indeeksii walqixa qabu"]],a:2,why:"Both conditions matter: n₁ > n₂, and θ₁ must be greater than θc."},
- {en:"A projectile is launched and lands at its original height. Ignoring air resistance, which launch angle gives the greatest horizontal range for a fixed speed?",om:"Wanti tokko darbatamee olka'iinsa jalqabaa irratti bu'a. Mormii qilleensaa yoo dhiifne, saffisa murtaa'eef koonaan fageenya dalgee guddaa kennu kam?",opts:[["15°","15°"],["30°","30°"],["45°","45°"],["75°","75°"]],a:2,why:"For equal launch and landing heights, R = v₀² sin(2θ)/g. This is greatest when sin(2θ) = 1, so θ = 45°."}
-];
-let selected={};
+}let selected={};
 function renderQuiz(){
  const box=$("quizContainer");box.innerHTML="";
  questions.forEach((q,i)=>{
